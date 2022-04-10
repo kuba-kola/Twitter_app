@@ -7,7 +7,7 @@ export default class SearchPanel extends Component {
         super(props);
         this.state = {
             term: ''
-        }
+        };
         this.onUpdateSearch = this.onUpdateSearch.bind(this);
     }
     onUpdateSearch(e){
