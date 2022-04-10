@@ -72,6 +72,7 @@ export default class App extends Component {
         }); 
     }
 
+    //Don't work
     onToggleLiked(id) {
         this.setState(({data}) => {
             const index = data.findIndex(elem => elem.id === id);
@@ -95,6 +96,8 @@ export default class App extends Component {
             return item.label.indexOf(term) > -1
         });
     }
+
+    //Don't work
 
     filterPost(items, filter) {
         if (filter === 'like') {
