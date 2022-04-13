@@ -5,6 +5,7 @@ import SearchPanel from '../search-panel';
 import PostStatusFilter from '../post-status-filter';
 import PostList from '../post-list';
 import PostAddForm from '../post-add-form';
+import picture from '../../assets/4.png'
 
 import './app.css';
 
@@ -16,7 +17,8 @@ export default class App extends Component {
             data : [
                 {label: 'Збіраюся вучыць React', importan:true, like: false, id: 1},
                 {label: 'Усё яшчэ збіраюся вучыць React', importan:false, like: false, id: 2},
-                {label: 'Сяджу і думаю для чаго мне гэта вось ўсё', importan:false, like: false, id: 3}
+                {label: 'Сяджу і думаю для чаго мне гэта вось ўсё', importan:false, like: false, id: 3},
+                // {label: <img src={picture} alt="img" />, importan:false, like: false, id: 4}
             ],
             
             term: '',
