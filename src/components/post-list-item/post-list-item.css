@@ -20,6 +20,9 @@
 .app-list-item .btn-trash {
     color: red;
 }
+.app-list-item .btn-like {
+  color: red;
+}
 .app-list-item .fa-heart {
     width: 35px;
     height: 35px;
