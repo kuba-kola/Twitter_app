@@ -55,3 +55,7 @@
 .app-list-item.important .btn-star {
     color: #aeaeae;
 }
+
+.app-list-item.like .btn-like {
+  color: red;
+}

@@ -13,7 +13,7 @@ export default class PostListItem extends Component {
         }
         
         if (like) {
-            classNames += 'like';
+            classNames += ' like';
         }
         
         return (
@@ -21,7 +21,13 @@ export default class PostListItem extends Component {
                 <span className="app-list-item-label">
                     {label}
                 </span>
-                <div className="d-flex justify-content-center align-items-center">
+                <div className="d-flex justify-content-center align-items-top">
+                <button 
+                    type="button" 
+                    className="btn-like btn-sm"
+                    onClick={onToggleLiked}>                
+                        <i className="fa fa-heart-o"></i>
+                    </button>
                     <button 
                     type="button" 
                     className="btn-star btn-sm"
@@ -33,13 +39,7 @@ export default class PostListItem extends Component {
                     className="btn-trash btn-sm"
                     onClick={onDelete}>                
                         <i className="fa fa-trash-o"></i>
-                    </button>
-                    <button 
-                    type="button" 
-                    className="btn-like btn-sm"
-                    onClick={onToggleLiked}>                
-                        <i className="fa fa-heart-o"></i>
-                    </button>
+                    </button>                    
                 </div>
             </div>
         )

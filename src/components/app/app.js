@@ -5,7 +5,10 @@ import SearchPanel from '../search-panel';
 import PostStatusFilter from '../post-status-filter';
 import PostList from '../post-list';
 import PostAddForm from '../post-add-form';
-import picture from '../../assets/4.png'
+import githubPic from '../../assets/4.png';
+import flexboxMem from '../../assets/1.png';
+import udemyMem from '../../assets/3.png';
+import gotMem from '../../assets/123.jpg';
 
 import './app.css';
 
@@ -15,10 +18,13 @@ export default class App extends Component {
         super(props);
         this.state = {
             data : [
-                {label: 'Збіраюся вучыць React', importan:true, like: false, id: 1},
-                {label: 'Усё яшчэ збіраюся вучыць React', importan:false, like: false, id: 2},
-                {label: 'Сяджу і думаю для чаго мне гэта вось ўсё', importan:false, like: false, id: 3},
-                {label: <img className='pic' src={picture} alt="img" />, importan:false, like: false, id: 4}
+                {label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔', importan:true, like: false, id: 1},
+                {label: 'Адзін лайк і я пачну так рабіць! Пагналі!', importan:false, like: true, id: 2},
+                {label: <img className='pic' src={githubPic} alt="img" />, importan:false, like: false, id: 3},
+                {label: <img className='pic' src={flexboxMem} alt="img" />, importan:false, like: false, id: 4},                
+                {label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐', importan:false, like: false, id: 5},
+                {label: <img className='pic' src={udemyMem} alt="img" />, importan:false, like: false, id: 6},
+                {label: <img className='pic' src={gotMem} alt="img" />, importan:false, like: false, id: 7},
             ],
             
             term: '',
