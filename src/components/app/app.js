@@ -18,13 +18,13 @@ export default class App extends Component {
         super(props);
         this.state = {
             data : [
-                {label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔', importan:true, like: false, id: 1},
-                {label: 'Адзін лайк і я пачну так рабіць! Пагналі!', importan:false, like: true, id: 2},
-                {label: <img className='pic' src={githubPic} alt="img" />, importan:false, like: false, id: 3},
-                {label: <img className='pic' src={flexboxMem} alt="img" />, importan:false, like: false, id: 4},                
-                {label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐', importan:false, like: false, id: 5},
-                {label: <img className='pic' src={udemyMem} alt="img" />, importan:false, like: false, id: 6},
-                {label: <img className='pic' src={gotMem} alt="img" />, importan:false, like: false, id: 7},
+                {label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔', important: false, like: false, id: 1},
+                {label: 'Адзін лайк і я пачну так рабіць! Пагналі!', important: false, like: true, id: 2},
+                {label: <img className='pic' src={githubPic} alt="img" />, important: false, like: false, id: 3},
+                {label: <img className='pic' src={flexboxMem} alt="img" />, important: false, like: false, id: 4},                
+                {label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐', important: false, like: false, id: 5},
+                {label: <img className='pic' src={udemyMem} alt="img" />, important: false, like: false, id: 6},
+                {label: <img className='pic' src={gotMem} alt="img" />, important: false, like: false, id: 7},
             ],
             
             term: '',
@@ -101,8 +101,8 @@ export default class App extends Component {
         }
 
         return items.filter((item) => {
-            return item.label.indexOf(term) > -1;
-        });
+            return item.label.indexOf(term) > -1
+        })
     }
 
     filterPost(items, filter) {

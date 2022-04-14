@@ -7,7 +7,7 @@ export default class SearchPanel extends Component {
         super(props);
         this.state = {
             term: ''
-        };
+        }
         this.onUpdateSearch = this.onUpdateSearch.bind(this);
     }
     onUpdateSearch(e){
@@ -18,11 +18,11 @@ export default class SearchPanel extends Component {
     render() {
         return (
             <input
-                className="form-control search-input"
-                type="text"
+                className = "form-control search-input"
+                type = "text"
                 placeholder="Пошук па запісах"
-                value={this.state.term}
-                onChange={this.onUpdateSearch}
+                value = {this.state.term}
+                onChange = {this.onUpdateSearch}
             />
         )
     }
