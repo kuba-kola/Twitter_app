@@ -23,15 +23,10 @@
 .app-list-item .btn-like {
   color: red;
 }
-.app-list-item .fa-heart {
-    width: 35px;
-    height: 35px;
+.app-list-item .fa-heart {    
     text-align: center;
-    line-height: 35px;
-    font-size: 16px;
     color: red;
     transition: 0.3s all;
-    transform: translateX(30px);
     opacity: 0;
 }
 
@@ -45,7 +40,7 @@
 
 .app-list-item.like .fa-heart {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0);
 }
 
 .app-list-item.important .app-list-item-label {
@@ -54,8 +49,4 @@
 
 .app-list-item.important .btn-star {
     color: #aeaeae;
-}
-
-.app-list-item.like .btn-like {
-  color: red;
 }

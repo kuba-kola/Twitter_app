@@ -26,7 +26,7 @@ export default class PostListItem extends Component {
                     type="button" 
                     className="btn-like btn-sm"
                     onClick={onToggleLiked}>                
-                        <i className="fa fa-heart-o"></i>
+                        <i className="fa fa-heart"></i>
                     </button>
                     <button 
                     type="button" 
