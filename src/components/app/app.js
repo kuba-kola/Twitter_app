@@ -20,11 +20,11 @@ export default class App extends Component {
             data : [
                 {label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔', important: false, like: false, id: 1},
                 {label: 'Адзін лайк і я пачну так рабіць! Пагналі!', important: false, like: true, id: 2},
-                {label: <img className='pic' src={githubPic} alt="img" />, important: false, like: false, id: 3},
-                {label: <img className='pic' src={flexboxMem} alt="img" />, important: false, like: false, id: 4},                
+                // {label: <img className='pic' src={githubPic} alt="img" />, important: false, like: false, id: 3},
+                // {label: <img className='pic' src={flexboxMem} alt="img" />, important: false, like: false, id: 4},                
                 {label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐', important: false, like: false, id: 5},
-                {label: <img className='pic' src={udemyMem} alt="img" />, important: false, like: false, id: 6},
-                {label: <img className='pic' src={gotMem} alt="img" />, important: false, like: false, id: 7},
+                // {label: <img className='pic' src={udemyMem} alt="img" />, important: false, like: false, id: 6},
+                // {label: <img className='pic' src={gotMem} alt="img" />, important: false, like: false, id: 7},
             ],
             
             term: '',
@@ -99,7 +99,7 @@ export default class App extends Component {
         if (term.length === 0) {
             return items;
         }
-
+        //Don't work with pics
         return items.filter((item) => {
             return item.label.indexOf(term) > -1
         })
@@ -131,19 +131,19 @@ export default class App extends Component {
             <div className="app">
                 <AppHeader liked = {liked} allPosts = {allPosts}/>
                 <div className = "search-panel d-flex">
-                    <SearchPanel
-                        onUpdateSearch = {this.onUpdateSearch}/>
+                    <SearchPanel onUpdateSearch = {this.onUpdateSearch} />
                     <PostStatusFilter
                         filter = {filter}
-                        onFilterSelect = {this.onFilterSelect}/>
+                        onFilterSelect = {this.onFilterSelect}
+                    />
                 </div>
                 <PostList 
-                posts = {visiblePosts}
-                onDelete = {this.deleteItem}
-                onToggleImportant = {this.onToggleImportant}
-                onToggleLiked = {this.onToggleLiked}/>
-                <PostAddForm
-                onAdd = {this.addItem}/>
+                    posts = {visiblePosts}
+                    onDelete = {this.deleteItem}
+                    onToggleImportant = {this.onToggleImportant}
+                    onToggleLiked = {this.onToggleLiked}
+                />
+                <PostAddForm onAdd = {this.addItem} />
             </div>
         )
     }
