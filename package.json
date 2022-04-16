@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://kuba-kola.github.io/Twitter_app/",
   "dependencies": {
+    "@babel/core": "^7.17.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
