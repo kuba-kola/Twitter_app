@@ -22,7 +22,7 @@ const AppHeader = ({liked, allPosts}) => {
             <div className='userpic_header'>
                 <img className='userpic' src={userpic} alt="img" /> 
                 <h1>Jakub</h1>
-                <h2>@kuba-kola</h2>                
+                <h2><a href="https://github.com/kuba-kola/">@kuba-kola</a></h2>
             </div>
             <h2> {allPosts} {numOfTweets}, з іх {numOfLikes} {liked}</h2>
         </div>
