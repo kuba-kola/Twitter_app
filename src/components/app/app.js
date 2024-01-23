@@ -1,31 +1,20 @@
 import React, {Component} from 'react';
 
-import AppHeader from '../app-header';
-import SearchPanel from '../search-panel';
-import PostStatusFilter from '../post-status-filter';
-import PostList from '../post-list';
-import PostAddForm from '../post-add-form';
-import githubPic from '../../assets/4.png';
-import flexboxMem from '../../assets/1.png';
-import udemyMem from '../../assets/3.png';
-import gotMem from '../../assets/123.jpg';
+import AppHeader from '../Header';
+import SearchPanel from '../SearchPanel';
+import PostStatusFilter from '../Filter';
+import PostList from '../List';
+import PostAddForm from '../AddForm';
 
 import './app.css';
+import { posts } from '../../shared/posts';
 
 export default class App extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            data : [
-                {label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔', important: false, like: false, id: 1},
-                {label: 'Адзін лайк і я пачну так рабіць! Пагналі!', important: false, like: true, id: 2},
-                {label: <img className='pic' src={githubPic} alt="img" />, important: false, like: false, id: 3},
-                {label: <img className='pic' src={flexboxMem} alt="img" />, important: false, like: false, id: 4},                
-                {label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐', important: false, like: false, id: 5},
-                {label: <img className='pic' src={udemyMem} alt="img" />, important: false, like: false, id: 6},
-                {label: <img className='pic' src={gotMem} alt="img" />, important: false, like: false, id: 7},
-            ],
+            data : posts,
             
             term: '',
             
