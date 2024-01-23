@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
+import uniqid from "uniqid";
+import { posts } from '../../shared/posts';
 
 import AppHeader from '../Header';
 import SearchPanel from '../SearchPanel';
@@ -7,129 +9,81 @@ import PostList from '../List';
 import PostAddForm from '../AddForm';
 
 import './app.css';
-import { posts } from '../../shared/posts';
 
-export default class App extends Component {
+const App = () => {
+    const [data, setData] = useState(posts);
+    const [searchPhrase, setSearchPhrase] = useState('');
+    const [filter, setFilter] = useState('all');
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            data : posts,
-            
-            term: '',
-            
-            filter: 'all'
-        };
-        this.deleteItem = this.deleteItem.bind(this);
-        this.addItem = this.addItem.bind(this);
-        this.onToggleImportant = this.onToggleImportant.bind(this);
-        this.onToggleLiked = this.onToggleLiked.bind(this);
-        this.onUpdateSearch = this.onUpdateSearch.bind(this);
-        this.onFilterSelect = this.onFilterSelect.bind(this);
-        this.maxId = 4;
+    const deleteItem = (id) => {
+        setData(data.filter((item) => item.id !== id));
     }
 
-    deleteItem(id) {
-        this.setState(({data}) => {
-            const index = data.findIndex(elem => elem.id === id);
-            const newArr = [...data.slice(0, index), ...data.slice(index + 1)];
-
-            return {
-                data: newArr
-            }
-        });
-    }
-
-    addItem(body) {
+    const addItem = (value) => {
         const newItem = {
-            label: body,
+            label: value,
             important: false,
-            id: this.maxId++
+            like: false,
+            id: uniqid(),
         }
 
-        this.setState(({data}) => {
-            const newArr = [...data, newItem];
+        setData([...data, newItem]);
+    };
 
-            return {
-                data: newArr
-            }
-        })
-    }
+    const onToggleItem = (id, status) => {
+        const index = data.findIndex((item) => item.id === id);
+        const updatedItem = { ...data[index], [status]: !data[index][status] };
 
-    onToggleImportant(id) {
-        this.setState(({data}) => {
-            const index = data.findIndex(elem => elem.id === id);
-            const old = data[index];
-            const newItem = {...old, important: !old.important};
-            const newArr = [...data.slice(0, index), newItem, ...data.slice(index + 1)];
+        setData([
+            ...data.slice(0, index),
+            updatedItem,
+            ...data.slice(index + 1)
+        ]);
+    };
 
-            return {
-                data: newArr
-            }
-        }); 
-    }
-
-    onToggleLiked(id) {
-        this.setState(({data}) => {
-            const index = data.findIndex(elem => elem.id === id);
-            const old = data[index];
-            const newItem = {...old, like: !old.like};
-            const newArr = [...data.slice(0, index), newItem, ...data.slice(index + 1)];
-
-            return {
-                data: newArr
-            }
-        }); 
-    }
-
-    searchPost(items, term) {
+    const searchPost = (items, term) => {
         if (term.length === 0) {
             return items;
-        }
+        };
         
-        return items.filter(item => typeof item.label === 'string').filter(item => item.label.includes(term))
-    }
+        return items.filter(item => typeof item.label === 'string').filter(item => item.label.toLowerCase().includes(term))
+    };
 
-    filterPost(items, filter) {
+    const filterPost = (items, filter) => {
         if (filter === 'like') {
             return items.filter(item => item.like)
         } else {
             return items
-        }
-    }
+        };
+    };
 
-    onUpdateSearch(term) {
-        this.setState({term});
-    }
+    const liked = () => data.filter((item) => item.like).length;
+    const allPosts = () =>  data.length;
+    const visiblePosts = filterPost(searchPost(data, searchPhrase), filter);
     
-    onFilterSelect(filter){
-        this.setState({filter});
-    }
-
-    render() {
-        const {data, term, filter} = this.state;
-        const liked = data.filter((item) => item.like).length;
-        const allPosts = data.length;
-        const visiblePosts = this.filterPost(this.searchPost(data, term), filter);
-        
-        return (
-            <div className="app">
-                <AppHeader liked = {liked} allPosts = {allPosts}/>
-                <div className = "search-panel d-flex">
-                    <SearchPanel onUpdateSearch = {this.onUpdateSearch} />
-                    <PostStatusFilter
-                        filter = {filter}
-                        onFilterSelect = {this.onFilterSelect}
-                    />
-                </div>
-                <PostList 
-                    posts = {visiblePosts}
-                    onDelete = {this.deleteItem}
-                    onToggleImportant = {this.onToggleImportant}
-                    onToggleLiked = {this.onToggleLiked}
+    return (
+        <div className="app">
+            <AppHeader liked={liked()} allPosts={allPosts()} />
+            <div className="search-panel d-flex">
+                <SearchPanel
+                    onUpdateSearch={(term) => setSearchPhrase(term.toLowerCase())}
                 />
-                <PostAddForm onAdd = {this.addItem} />
+                <PostStatusFilter
+                    filter={filter}
+                    onFilterSelect={(value) => setFilter(value)}
+                />
             </div>
-        )
-    }
-}
+            <PostList
+                posts={visiblePosts}
+                onDelete={deleteItem}
+                onToggleImportant={onToggleItem}
+                onToggleLiked={onToggleItem}
+            />
+            <PostAddForm
+                onAdd={addItem}
+            />
+        </div>
+    );
+};
+
+export default App;
