@@ -1,2 +1,38 @@
-import PostAddForm from './post-add-form';
+import React, {useState} from 'react';
+
+import './styles.css'
+
+const PostAddForm = ({ onAdd }) => {
+    const [text, setText] = useState('');
+
+    const onValueChange = (e) => {
+        setText(e.target.value)
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onAdd(text);
+        setText(e.target.value)
+    };
+
+    return (
+        <form
+            className="bottom-panel d-flex"
+            onSubmit={onSubmit}>
+            <input
+                type="text"
+                placeholder="Пра што вы думаеце зараз?"
+                className="form-control new-post-label"
+                onChange={onValueChange}
+                value={text}
+            />
+            <button
+                type="submit"
+                className="btn btn-outline-secondary">
+                Дадаць
+            </button>
+        </form>
+    );
+};
+
 export default PostAddForm;
