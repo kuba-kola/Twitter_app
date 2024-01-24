@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import userpic from '../../assets/userpic.jpg'
-import image from '../../assets/icons/image_.svg'
-import emoji from '../../assets/icons/emoji smile_.svg'
+import image from '../../assets/icons/image.svg'
+import emoji from '../../assets/icons/emoji_smile.svg'
 
 import styles from './styles.module.css'
 

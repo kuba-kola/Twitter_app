@@ -9,6 +9,7 @@ import PostList from '../PostList';
 import AddForm from '../AddForm';
 
 import styles from './style.module.css';
+import NavPanel from '../NavPanel';
 
 const App = () => {
     const [data, setData] = useState(posts);
@@ -63,25 +64,33 @@ const App = () => {
     
     return (
         <div className={styles.app}>
-            <AppHeader liked={liked()} allPosts={allPosts()} />
-            <div className={styles.searchPanel}>
-                <SearchPanel
-                    onUpdateSearch={(term) => setSearchPhrase(term.toLowerCase())}
+            <div className={styles.nav}>
+                MENU
+            </div>
+            <div className={styles.body}>
+                <NavPanel />
+                <AppHeader liked={liked()} allPosts={allPosts()} />
+                <AddForm
+                    onAdd={addItem}
                 />
-                <PostStatusFilter
-                    filter={filter}
-                    onFilterSelect={(value) => setFilter(value)}
+                <PostList
+                    posts={visiblePosts}
+                    onDelete={deleteItem}
+                    onToggleImportant={onToggleItem}
+                    onToggleLiked={onToggleItem}
                 />
             </div>
-            <AddForm
-                onAdd={addItem}
-            />
-            <PostList
-                posts={visiblePosts}
-                onDelete={deleteItem}
-                onToggleImportant={onToggleItem}
-                onToggleLiked={onToggleItem}
-            />
+            <div className={styles.trends}>
+                <div className={styles.searchPanel}>
+                    <SearchPanel
+                        onUpdateSearch={(term) => setSearchPhrase(term.toLowerCase())}
+                    />
+                    <PostStatusFilter
+                        filter={filter}
+                        onFilterSelect={(value) => setFilter(value)}
+                    />
+                </div>
+            </div>
         </div>
     );
 };
