@@ -5,10 +5,10 @@ import { posts } from '../../shared/posts';
 import AppHeader from '../Header';
 import SearchPanel from '../SearchPanel';
 import PostStatusFilter from '../Filter';
-import PostList from '../List';
-import AddForm from '../AddForm';
+import PostList from '../PostList';
+import PostAddForm from '../AddForm';
 
-import './app.css';
+import styles from './style.module.css';
 
 const App = () => {
     const [data, setData] = useState(posts);
@@ -62,9 +62,9 @@ const App = () => {
     const visiblePosts = filterPost(searchPost(data, searchPhrase), filter);
     
     return (
-        <div className="app">
+        <div className={styles.app}>
             <AppHeader liked={liked()} allPosts={allPosts()} />
-            <div className="search-panel d-flex">
+            <div className={styles.searchPanel}>
                 <SearchPanel
                     onUpdateSearch={(term) => setSearchPhrase(term.toLowerCase())}
                 />
