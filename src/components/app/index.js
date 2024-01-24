@@ -6,7 +6,7 @@ import AppHeader from '../Header';
 import SearchPanel from '../SearchPanel';
 import PostStatusFilter from '../Filter';
 import PostList from '../PostList';
-import PostAddForm from '../AddForm';
+import AddForm from '../AddForm';
 
 import styles from './style.module.css';
 
