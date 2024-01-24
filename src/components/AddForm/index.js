@@ -28,11 +28,11 @@ const AddForm = ({ onAdd }) => {
                         alt="img"
                     /> 
                 </div>
-                <div className='tweet_container'>
+                <div className={styles.input}>
                     <textarea
                         type="text"
                         placeholder="Пра што вы думаеце зараз?"
-                        className="form-control new-post-label"
+                        className={styles.textArea}
                         onChange={onValueChange}
                         value={text}
                     />
@@ -63,22 +63,6 @@ const AddForm = ({ onAdd }) => {
                 </div>
             </div>
         </div>
-        // <form
-        //     className="bottom-panel d-flex"
-        //     onSubmit={onSubmit}>
-        //     <textarea
-        //         type="text"
-        //         placeholder="Пра што вы думаеце зараз?"
-        //         className="form-control new-post-label"
-        //         onChange={onValueChange}
-        //         value={text}
-        //     />
-        //     <button
-        //         type="submit"
-        //         className="btn btn-outline-secondary">
-        //         Дадаць
-        //     </button>
-        // </form>
     );
 };
 

@@ -1,11 +1,11 @@
 .container {
   display: flex;
-  padding: 0 16px;
-  width: 100%;
+  /* padding: 0 16px; */
 }
 
 .block {
   display: flex;
+  width: 100%
 }
 
 .footer {
@@ -24,15 +24,6 @@
   border-radius: 20px;
 }
 
-.button {
-  height: 36px;
-  min-width: 36px;
-  text-align: center;
-  border-radius: 20px;
-  background-color: rgb(29, 155, 240);
-  border-color: rgba(0, 0, 0, 0);
-}
-
 .label {
   margin: 15px;
   color: white;
@@ -44,19 +35,21 @@
   padding-right: 5px;
 }
 
-.bottom-panel {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.bottom-panel .new-post-label {
-  width: auto;
-  flex-grow: 1;
-  margin-right: 3px;
-}
-
 .userpic {
   height: 40px;
   width: 40px;
   border-radius: 200px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textArea {
+  height: 100px;
+  overflow: auto;
+  border: none;
+  resize: none;
 }
