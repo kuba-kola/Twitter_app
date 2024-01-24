@@ -1,15 +1,15 @@
-.app-header {
+.appHeader {
+  display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
 }
 
-.app-header h1 {
+.appHeader h1 {
   font-size: 26px;
   text-align: center;
 }
 
-.app-header h2 {
+.appHeader h2 {
   font-size: 1.2rem;
   color: grey;
   text-align: center;
