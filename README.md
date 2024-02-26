@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## :hash: Description
 
-Check it [Click](https://kuba-kola.github.io/Twitter_app/).
+One of the first projects I completed during my studies. You can check it on [gh-pages](https://kuba-kola.github.io/Twitter_app/)
 
 ## :blue_book: Table of contents
 
@@ -14,15 +14,46 @@ Check it [Click](https://kuba-kola.github.io/Twitter_app/).
 
   2. [Additional libraries](#open_book-additional-libraries)
 
-  
+  3. [Prerequisites and Setup](#wrench-prerequisites-and-setup)
+
+  4. [Testing](#question-testing)
+
+  6. [Coding Styleguides](#writing_hand-coding-styleguides)
+
 ## :computer: Technology stack
 
-- [React 17](https://reactjs.org/)
-- [Node 17.5.0](https://nodejs.org/en/)
+- [React 18.2.0](https://reactjs.org/)
+- [Node 17.9.1](https://nodejs.org/en/)
 
 ## :open_book: Additional libraries
 
-- [redux](https://redux.js.org/)
-- [redux-thunk](https://github.com/reduxjs/redux-thunk)
-- [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
-- [classnames](https://github.com/JedWatson/classnames)
+- [bootstrap](https://getbootstrap.com/)
+- [uniqid](https://github.com/adamhalasz/uniqid/)
+
+## :wrench: Prerequisites and Setup
+
+To install all dependencies simply run:
+
+```bash
+npm i
+```
+
+### Running / Development
+
+You can get app up and running with simple command:
+
+```bash
+npm start
+```
+
+## :question: Testing
+
+Run:
+
+```bash
+npm test
+```
+
+## :writing_hand: Coding Styleguides
+
+The app uses eslint and stylelint to enforce a strict coding style.
