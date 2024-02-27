@@ -11,69 +11,69 @@ import commentIcon from '../../assets/icons/comment.png';
 import styles from './styles.module.css';
 
 const PostListItem = ({
-    text,
-    img,
-    like,
-    retweet,
-    important,
-    onDelete,
-    onToggleImportant,
-    onToggleLiked,
-    onToggleRetweeted,
+  text,
+  img,
+  like,
+  retweet,
+  important,
+  onDelete,
+  onToggleImportant,
+  onToggleLiked,
+  onToggleRetweeted,
 }) => (
-    <div className={styles.container}>
-        <div className={styles.tweet}>
-            <span className={styles.label}>
-                {text}
-            </span>
-            {img && (
-                <img
-                    className={styles.image}
-                    src={img}
-                    alt="img"
-                />
-            )}
-        </div>
-        <div className={styles.buttonsContainer}>
-            <div>
-                <img
-                    className={styles.icon}
-                    src={commentIcon}
-                    alt="img"
-                /> 
-            </div>
-            <div onClick={onToggleLiked}>
-                <img
-                    className={styles.icon}
-                    src={like ? likedIcon : likeIcon}
-                    alt="img"
-                /> 
-            </div>
-            <div onClick={onToggleRetweeted}>
-                <img
-                    className={styles.icon}
-                    src={retweet ? retweetedIcon : retweetIcon}
-                    alt="img"
-                /> 
-            </div>
-            <div className={styles.editButtons}>
-                <div onClick={onDelete}>
-                    <img
-                        className={styles.editIcon}
-                        src={deleteIcon}
-                        alt="img"
-                    />
-                </div>
-                <div onClick={onToggleImportant}>
-                    <img
-                        className={styles.editIcon}
-                        src={important ? bookmarkedIcon : bookmarkIcon}
-                        alt="img"
-                    />
-                </div>
-            </div>
-        </div>
+  <div className={styles.container}>
+    <div className={styles.tweet}>
+      <span className={styles.label}>
+        {text}
+      </span>
+      {img && (
+        <img
+          className={styles.image}
+          src={img}
+          alt="img"
+        />
+      )}
     </div>
+    <div className={styles.buttonsContainer}>
+      <div>
+        <img
+          className={styles.icon}
+          src={commentIcon}
+          alt="img"
+        /> 
+      </div>
+      <div onClick={onToggleLiked}>
+        <img
+          className={styles.icon}
+          src={like ? likedIcon : likeIcon}
+          alt="img"
+        /> 
+      </div>
+      <div onClick={onToggleRetweeted}>
+        <img
+          className={styles.icon}
+          src={retweet ? retweetedIcon : retweetIcon}
+          alt="img"
+        /> 
+      </div>
+      <div className={styles.editButtons}>
+        <div onClick={onDelete}>
+          <img
+            className={styles.editIcon}
+            src={deleteIcon}
+            alt="img"
+          />
+        </div>
+        <div onClick={onToggleImportant}>
+          <img
+            className={styles.editIcon}
+            src={important ? bookmarkedIcon : bookmarkIcon}
+            alt="img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 export default PostListItem;

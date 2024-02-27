@@ -3,33 +3,33 @@ import React from 'react';
 import './style.module.css'
     
 const PostStatusFilter = ({
-    filter,
-    onFilterSelect,
+  filter,
+  onFilterSelect,
 }) => {
-const defaultButtons = [
+  const defaultButtons = [
     { name: 'all', text: 'Усе' },
-    { name: 'like', text: 'Спадабалася' }
-];
+    { name: 'like', text: 'Спадабалася' },
+  ];
         
-    const buttons = defaultButtons.map(({ name, text }) => {
+  const buttons = defaultButtons.map(({ name, text }) => {
     const active = filter === name;
     const style = active ? 'btn-info' : 'btn-outline-secondary'
     return (
-        <button type='button'
-            className={`btn ${style}`}
-            key={name}
-            onClick={() => onFilterSelect(name)}
-        >
-            {text}
-        </button>
+      <button type='button'
+        className={`btn ${style}`}
+        key={name}
+        onClick={() => onFilterSelect(name)}
+      >
+        {text}
+      </button>
     )
-});
+  });
 
-return (
+  return (
     <div className="btn-group">
-        {buttons}
+      {buttons}
     </div>
-)
+  )
 };
 
 export default PostStatusFilter;

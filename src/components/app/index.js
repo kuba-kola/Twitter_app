@@ -28,17 +28,17 @@ function App() {
       id: uniqid(),
     };
 
-      setData([newItem, ...data]);
-    };
+    setData([newItem, ...data]);
+  };
 
   const onToggleItem = (id, status) => {
     const index = data.findIndex((item) => item.id === id);
     const updatedItem = { ...data[index], [status]: !data[index][status] };
     const newItem = {
-        ...data[index],
-        retweet: true,
-        id: uniqid(),
-      };
+      ...data[index],
+      retweet: true,
+      id: uniqid(),
+    };
     
     setData([
       newItem,
@@ -53,7 +53,7 @@ function App() {
       return items;
     }
 
-      return items.filter((item) => typeof item.text === 'string').filter((item) => item.text.toLowerCase().includes(term));
+    return items.filter((item) => typeof item.text === 'string').filter((item) => item.text.toLowerCase().includes(term));
   };
 
   const filterPost = (items, filter) => {
