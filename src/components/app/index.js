@@ -34,14 +34,13 @@ function App() {
   const onToggleItem = (id, status) => {
     const index = data.findIndex((item) => item.id === id);
     const updatedItem = { ...data[index], [status]: !data[index][status] };
-    const newItem = {
-      ...data[index],
-      retweet: true,
-      id: uniqid(),
-    };
+    // const newItem = {
+    //   ...data[index],
+    //   retweet: true,
+    //   id: uniqid(),
+    // };
     
     setData([
-      newItem,
       ...data.slice(0, index),
       updatedItem,
       ...data.slice(index + 1),
@@ -63,8 +62,6 @@ function App() {
     return items;
   };
 
-  const liked = () => data.filter((item) => item.like).length;
-  const allPosts = () => data.length;
   const visiblePosts = filterPost(searchPost(data, searchPhrase), filter);
 
   return (
@@ -74,7 +71,9 @@ function App() {
       </div>
       <div className={styles.body}>
         <NavPanel />
-        <AppHeader liked={liked()} allPosts={allPosts()} />
+        <AppHeader 
+          data={data}
+        />
         <AddForm
           onAdd={addItem}
         />

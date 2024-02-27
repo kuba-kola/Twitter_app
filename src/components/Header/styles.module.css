@@ -27,3 +27,18 @@
   color: grey;
   text-decoration: none
 }
+
+.stat {
+  display: flex;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+  }
+
+  .count {
+    padding-right: 5px;
+    font-weight: bold;
+  }
+}
