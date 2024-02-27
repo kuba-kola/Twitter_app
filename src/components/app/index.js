@@ -4,7 +4,6 @@ import { posts } from '../../shared/posts';
 
 import AppHeader from '../common/Header';
 import SearchPanel from '../common/SearchPanel';
-import PostStatusFilter from '../common/Filter';
 import PostList from '../common/PostList';
 import AddForm from '../common/AddForm';
 
@@ -78,18 +77,20 @@ function App() {
   };
 
   const filterPost = (items, filter) => {
-    if (filter === 'like') {
-      return items.filter((item) => item.like);
+    if (filter === 'important') {
+      return items.filter((item) => item.important);
     }
     return items;
   };
 
-  const visiblePosts = filterPost(searchPost(data, searchPhrase), filter);
+  const visiblePosts = () => filterPost(searchPost(data, searchPhrase), filter);
 
   return (
     <div className={styles.app}>
       <div className={styles.nav}>
-        <MenuNavigation />
+        <MenuNavigation
+          setFilter={setFilter}
+        />
       </div>
       <div className={styles.body}>
         <NavPanel />
@@ -100,7 +101,7 @@ function App() {
           onAdd={addItem}
         />
         <PostList
-          posts={visiblePosts}
+          posts={visiblePosts()}
           onDelete={deleteItem}
           onToggleImportant={onToggleItem}
           onToggleLiked={onToggleItem}
@@ -111,10 +112,6 @@ function App() {
         <div className={styles.searchPanel}>
           <SearchPanel
             onUpdateSearch={(term) => setSearchPhrase(term.toLowerCase())}
-          />
-          <PostStatusFilter
-            filter={filter}
-            onFilterSelect={(value) => setFilter(value)}
           />
         </div>
       </div>

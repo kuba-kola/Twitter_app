@@ -56,7 +56,7 @@ const AddForm = ({ onAdd }) => {
                 onClick={() => onSubmit()}
                 disabled={!text}
               >
-                                Дадаць
+                Дадаць
               </button>
             </div>
           </div>
