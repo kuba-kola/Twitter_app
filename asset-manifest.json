@@ -1,25 +1,21 @@
 {
   "files": {
-    "main.css": "/Twitter_app/static/css/main.5fd01b57.chunk.css",
-    "main.js": "/Twitter_app/static/js/main.2b39a339.chunk.js",
-    "main.js.map": "/Twitter_app/static/js/main.2b39a339.chunk.js.map",
-    "runtime-main.js": "/Twitter_app/static/js/runtime-main.a35abb43.js",
-    "runtime-main.js.map": "/Twitter_app/static/js/runtime-main.a35abb43.js.map",
-    "static/js/2.3ea10bd9.chunk.js": "/Twitter_app/static/js/2.3ea10bd9.chunk.js",
-    "static/js/2.3ea10bd9.chunk.js.map": "/Twitter_app/static/js/2.3ea10bd9.chunk.js.map",
+    "main.css": "/Twitter_app/static/css/main.cedb852f.css",
+    "main.js": "/Twitter_app/static/js/main.95e2332f.js",
+    "static/media/123.jpg": "/Twitter_app/static/media/123.944ca0a6908fcbecf93b.jpg",
+    "static/media/userpic.jpg": "/Twitter_app/static/media/userpic.2d9a71ada87c2a941f6b.jpg",
+    "static/media/4.jpeg": "/Twitter_app/static/media/4.05483f298292b40c5062.jpeg",
+    "static/media/1.jpeg": "/Twitter_app/static/media/1.d327fb5e10bcf3ee8a41.jpeg",
+    "static/media/3.jpeg": "/Twitter_app/static/media/3.f69a79ba4287a9548e0a.jpeg",
+    "static/media/emoji_smile.svg": "/Twitter_app/static/media/emoji_smile.9e2ac1ad28f6294df0d048390c92ede9.svg",
+    "static/media/image.svg": "/Twitter_app/static/media/image.76739a420a09b1aae84c80ff339596e2.svg",
+    "static/media/arrow_left.svg": "/Twitter_app/static/media/arrow_left.77f11523553efbc3ff46a56bd1d0733e.svg",
     "index.html": "/Twitter_app/index.html",
-    "static/css/main.5fd01b57.chunk.css.map": "/Twitter_app/static/css/main.5fd01b57.chunk.css.map",
-    "static/js/2.3ea10bd9.chunk.js.LICENSE.txt": "/Twitter_app/static/js/2.3ea10bd9.chunk.js.LICENSE.txt",
-    "static/media/1.41514849.png": "/Twitter_app/static/media/1.41514849.png",
-    "static/media/123.944ca0a6.jpg": "/Twitter_app/static/media/123.944ca0a6.jpg",
-    "static/media/3.54a4f7f6.png": "/Twitter_app/static/media/3.54a4f7f6.png",
-    "static/media/4.186a985a.png": "/Twitter_app/static/media/4.186a985a.png",
-    "static/media/userpic.2d9a71ad.jpg": "/Twitter_app/static/media/userpic.2d9a71ad.jpg"
+    "main.cedb852f.css.map": "/Twitter_app/static/css/main.cedb852f.css.map",
+    "main.95e2332f.js.map": "/Twitter_app/static/js/main.95e2332f.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.a35abb43.js",
-    "static/js/2.3ea10bd9.chunk.js",
-    "static/css/main.5fd01b57.chunk.css",
-    "static/js/main.2b39a339.chunk.js"
+    "static/css/main.cedb852f.css",
+    "static/js/main.95e2332f.js"
   ]
 }
