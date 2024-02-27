@@ -16,7 +16,7 @@ const SearchPanel = ({
     <input
       className={styles.input}
       type="text"
-      placeholder="Пошук па запісах"
+      placeholder="Search"
       value={term}
       onChange={updateSearch}
     />
