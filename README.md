@@ -18,6 +18,8 @@ One of the first projects I completed during my studies. You can check it on [gh
 
   4. [Testing](#question-testing)
 
+  5. [Deployment on Gh-Pages](#satellite-deployment-on-Gh-Pages)
+
   6. [Coding Styleguides](#writing_hand-coding-styleguides)
 
 ## :computer: Technology stack
@@ -57,6 +59,21 @@ Run:
 ```bash
 npm test
 ```
+
+## :satellite: Deployment on Gh-Pages
+
+First, run the build:
+
+```bash
+npm run build
+```
+
+Then run deployment:
+
+```bash
+npm run deploy
+```
+
 
 ## :writing_hand: Coding Styleguides
 
