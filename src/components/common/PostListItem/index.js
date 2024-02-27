@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import likeIcon from '../../../assets/icons/like.png';
 import likedIcon from '../../../assets/icons/liked.png';
 import bookmarkIcon from '../../../assets/icons/bookmark.png';
@@ -9,6 +9,7 @@ import commentIcon from '../../../assets/icons/comment.png';
 
 import styles from './styles.module.css';
 import DeleteModal from '../DeleteModal';
+import { useOutsideClick } from '../../../shared/hooks';
 
 const PostListItem = ({
   text,
@@ -21,6 +22,11 @@ const PostListItem = ({
   onToggleRetweeted,
 }) => {
   const [isShown, setIsShown] = useState(false);
+  const wrapperRef = useRef(null);
+
+  useOutsideClick(wrapperRef, () => {
+    setIsShown(false)
+  });
   
   return (
     <div className={styles.container}>
@@ -79,6 +85,7 @@ const PostListItem = ({
         <DeleteModal
           setIsShown={setIsShown}
           onDelete={onDelete}
+          wrapperRef={wrapperRef}
         />
       )}
     </div>
