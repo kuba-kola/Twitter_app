@@ -29,6 +29,10 @@ One of the first projects I completed during my studies. You can check it on [gh
 
 - [bootstrap](https://getbootstrap.com/)
 - [uniqid](https://github.com/adamhalasz/uniqid/)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [react-bootstrap](https://react-bootstrap.netlify.app/)
+- [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
 
 ## :wrench: Prerequisites and Setup
 
