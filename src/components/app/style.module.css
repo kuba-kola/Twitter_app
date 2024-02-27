@@ -1,8 +1,28 @@
 .app {
-  margin: 0 auto;
-  max-width: 800px;
+  display: flex;
+  justify-content: center;
 }
 
 .searchPanel {
   display: flex;
+  padding: 15px;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+  width: 30%;
+}
+
+.trends {
+  width: 30%;
+}
+
+.body {
+  min-width: 600px;
+  height: 100vh;
+  padding: 15px;
+  border-left: 1px solid #ede7e3;
+  border-right: 1px solid #ede7e3;
 }

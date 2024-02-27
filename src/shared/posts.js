@@ -1,50 +1,65 @@
 
-import githubPic from '../assets/4.png';
-import flexboxMem from '../assets/1.png';
-import udemyMem from '../assets/3.png';
+import uniqid from 'uniqid';
+import githubPic from '../assets/4.jpeg';
+import flexboxMem from '../assets/1.jpeg';
+import udemyMem from '../assets/3.jpeg';
 import gotMem from '../assets/123.jpg';
 
 export const posts = [
-    {
-        label: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔',
-        important: false,
-        like: false,
-        id: 1
-    },
-    {
-        label: 'Адзін лайк і я пачну так рабіць! Пагналі!',
-        important: false,
-        like: false,
-        id: 2
-    },
-    {
-        label: <img className='pic' src={githubPic} alt="img" />,
-        important: false,
-        like: false,
-        id: 3
-    },
-    {
-        label: <img className='pic' src={flexboxMem} alt="img" />,
-        important: false,
-        like: false,
-        id: 4
-    },
-    {
-        label: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐',
-        important: false,
-        like: false,
-        id: 5
-    },
-    {
-        label: <img className='pic' src={udemyMem} alt="img" />,
-        important: false,
-        like: false,
-        id: 6
-    },
-    {
-        label: <img className='pic' src={gotMem} alt="img" />,
-        important: false,
-        like: false,
-        id: 7
-    },
+  {
+    text: 'Наколькі добрая ідэя шукаць працу праз мемы? 🤔',
+    img: null,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: 'Адзін лайк і я пачну так рабіць! Пагналі!',
+    img: null,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: "Я і 5 маіх pet-праектаў на Github",
+    img: githubPic,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: "Гэта я чакаю вашага запрашэння на стажыроўку",
+    img: flexboxMem,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: 'Самы час ці то лайкнуць, ці то дэлітнуць 🧐',
+    img: null,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: "Я і мой сябр з сертыфікатамі з Udemy",
+    img: udemyMem,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
+  {
+    text: "",
+    img: gotMem,
+    important: false,
+    like: false,
+    retweet: false,
+    id: uniqid(),
+  },
 ];

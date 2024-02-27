@@ -1,11 +1,12 @@
 .container {
   display: flex;
-  padding: 0 16px;
-  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #ede7e3;
 }
 
 .block {
   display: flex;
+  width: 100%
 }
 
 .footer {
@@ -16,7 +17,7 @@
 }
 
 .userpicContainer {
-  padding: 12px 12px 0 0;
+  padding-right: 12px;
 }
 
 .buttonContainer {
@@ -35,19 +36,21 @@
   padding-right: 5px;
 }
 
-.bottom-panel {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.bottom-panel .new-post-label {
-  width: auto;
-  flex-grow: 1;
-  margin-right: 3px;
-}
-
 .userpic {
   height: 40px;
   width: 40px;
   border-radius: 200px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textArea {
+  height: 100px;
+  overflow: auto;
+  border: none;
+  resize: none;
 }

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 520px;
+  border-radius: 16px;
+}
+
+.label {
+  display: block;
+  line-height: 35px;
+  cursor: pointer;
+  user-select: none;
+  transition: all .5s;
+}
+
+.buttonsContainer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+  :blur {
+    background-color: #ccc;
+  }
+}
+
+.editButtons {
+  display: flex;
+}
+
+.editIcon {
+  height: 17px;
+  cursor: pointer;
+  padding-left: 15px;
+}

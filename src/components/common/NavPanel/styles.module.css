@@ -1,0 +1,27 @@
+.goBackButton {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.count {
+    font-size: 13px;
+    color: grey;
+}

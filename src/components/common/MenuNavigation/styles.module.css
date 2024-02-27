@@ -1,0 +1,21 @@
+.contaner {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.link svg {
+    height: 25px;
+    width: 25px;
+}
+
+.link span {
+    padding-left: 15px;
+    font-size: 25px;
+}
