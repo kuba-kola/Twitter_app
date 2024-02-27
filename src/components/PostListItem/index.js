@@ -1,36 +1,77 @@
 import React from 'react';
+import likeIcon from '../../assets/icons/like.png';
+import likedIcon from '../../assets/icons/liked.png';
+import bookmarkIcon from '../../assets/icons/bookmark.png';
+import bookmarkedIcon from '../../assets/icons/bookmarked.png';
+import deleteIcon from '../../assets/icons/display.png';
+import retweetIcon from '../../assets/icons/retweet.png';
+import retweetedIcon from '../../assets/icons/retweeted.png';
+import commentIcon from '../../assets/icons/comment.png';
 
 import styles from './styles.module.css';
 
 const PostListItem = ({
-    label,
+    text,
+    img,
+    like,
+    retweet,
+    important,
     onDelete,
     onToggleImportant,
     onToggleLiked,
+    onToggleRetweeted,
 }) => (
     <div className={styles.container}>
-        <span className={styles.label}>
-            {label}
-        </span>
+        <div className={styles.tweet}>
+            <span className={styles.label}>
+                {text}
+            </span>
+            {img && (
+                <img
+                    className={styles.image}
+                    src={img}
+                    alt="img"
+                />
+            )}
+        </div>
         <div className={styles.buttonsContainer}>
-            <button
-                type="button"
-                className="btn-like btn-sm"
-                onClick={onToggleLiked}>
-                <i className="fa fa-heart"></i>
-            </button>
-            <button
-                type="button"
-                className="btn-star btn-sm"
-                onClick={onToggleImportant}>
-                <i className="fa fa-star"></i>
-            </button>
-            <button
-                type="button"
-                className="btn-trash btn-sm"
-                onClick={onDelete}>
-                <i className="fa fa-trash-o"></i>
-            </button>
+            <div>
+                <img
+                    className={styles.icon}
+                    src={commentIcon}
+                    alt="img"
+                /> 
+            </div>
+            <div onClick={onToggleLiked}>
+                <img
+                    className={styles.icon}
+                    src={like ? likedIcon : likeIcon}
+                    alt="img"
+                /> 
+            </div>
+            <div onClick={onToggleRetweeted}>
+                <img
+                    className={styles.icon}
+                    src={retweet ? retweetedIcon : retweetIcon}
+                    alt="img"
+                /> 
+            </div>
+            <div className={styles.editButtons}>
+                <div onClick={onDelete}>
+                    <img
+                        className={styles.editIcon}
+                        src={deleteIcon}
+                        alt="img"
+                    />
+                </div>
+                <div onClick={onToggleImportant}>
+                    <img
+                        className={styles.editIcon}
+                        src={important ? bookmarkedIcon : bookmarkIcon}
+                        alt="img"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 );

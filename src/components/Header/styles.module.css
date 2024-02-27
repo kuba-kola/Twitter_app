@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  padding-top: 15px;
+  padding: 15px 0;
   align-items: flex-end;
   justify-content: space-between;
+  border-bottom: 1px solid #ede7e3;
 }
 
 .container {
