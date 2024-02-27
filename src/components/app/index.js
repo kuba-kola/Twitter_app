@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import { posts } from '../../shared/posts';
 
@@ -30,21 +30,42 @@ function App() {
 
     setData([newItem, ...data]);
   };
+  
+  const onToggleIRetweet = (id, status) => {
+    const retweetedItems = data.filter((item) => item.retweet && item.id.includes("-copy"));
+
+    if (retweetedItems.length) {
+      deleteItem(retweetedItems[0].id);
+    } else {
+      onToggleItem(id, status);
+    }
+  };
 
   const onToggleItem = (id, status) => {
     const index = data.findIndex((item) => item.id === id);
-    const updatedItem = { ...data[index], [status]: !data[index][status] };
-    // const newItem = {
-    //   ...data[index],
-    //   retweet: true,
-    //   id: uniqid(),
-    // };
-    
-    setData([
-      ...data.slice(0, index),
-      updatedItem,
-      ...data.slice(index + 1),
-    ]);
+    const updatedItem = {
+      ...data[index],
+      [status]: !data[index][status],
+    };
+    const newItem = {
+      ...data.find((item) => item.id === id),
+      retweet: true,
+      id: `${id}-copy`,
+    };
+    setData(
+      status === 'retweet'
+        ? [
+          newItem,
+          ...data.slice(0, index),
+          updatedItem,
+          ...data.slice(index + 1),
+        ]
+        : [
+          ...data.slice(0, index),
+          updatedItem,
+          ...data.slice(index + 1),
+        ],
+    );
   };
 
   const searchPost = (items, term) => {
@@ -82,7 +103,7 @@ function App() {
           onDelete={deleteItem}
           onToggleImportant={onToggleItem}
           onToggleLiked={onToggleItem}
-          onToggleRetweeted={onToggleItem}
+          onToggleRetweeted={onToggleIRetweet}
         />
       </div>
       <div className={styles.trends}>

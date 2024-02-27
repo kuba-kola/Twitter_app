@@ -15,7 +15,6 @@ const PostListItem = ({
   text,
   img,
   like,
-  retweet,
   important,
   onDelete,
   onToggleImportant,
@@ -56,7 +55,7 @@ const PostListItem = ({
         <div onClick={onToggleRetweeted}>
           <img
             className={styles.icon}
-            src={retweet ? retweetedIcon : retweetIcon}
+            src={retweetIcon}
             alt="img"
           />
         </div>
