@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import likeIcon from '../../assets/icons/like.png';
-import likedIcon from '../../assets/icons/liked.png';
-import bookmarkIcon from '../../assets/icons/bookmark.png';
-import bookmarkedIcon from '../../assets/icons/bookmarked.png';
-import deleteIcon from '../../assets/icons/display.png';
-import retweetIcon from '../../assets/icons/retweet.png';
-import retweetedIcon from '../../assets/icons/retweeted.png';
-import commentIcon from '../../assets/icons/comment.png';
+import likeIcon from '../../../assets/icons/like.png';
+import likedIcon from '../../../assets/icons/liked.png';
+import bookmarkIcon from '../../../assets/icons/bookmark.png';
+import bookmarkedIcon from '../../../assets/icons/bookmarked.png';
+import deleteIcon from '../../../assets/icons/display.png';
+import retweetIcon from '../../../assets/icons/retweet.png';
+import commentIcon from '../../../assets/icons/comment.png';
 
 import styles from './styles.module.css';
-import DeleteModal from '../common/DeleteModal';
+import DeleteModal from '../DeleteModal';
 
 const PostListItem = ({
   text,

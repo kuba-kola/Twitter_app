@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import uniqid from 'uniqid';
 import { posts } from '../../shared/posts';
 
-import AppHeader from '../Header';
-import SearchPanel from '../SearchPanel';
-import PostStatusFilter from '../Filter';
-import PostList from '../PostList';
-import AddForm from '../AddForm';
+import AppHeader from '../common/Header';
+import SearchPanel from '../common/SearchPanel';
+import PostStatusFilter from '../common/Filter';
+import PostList from '../common/PostList';
+import AddForm from '../common/AddForm';
 
 import styles from './style.module.css';
-import NavPanel from '../NavPanel';
+import NavPanel from '../common/NavPanel';
+import MenuNavigation from '../common/MenuNavigation';
 
 function App() {
   const [data, setData] = useState(posts);
@@ -88,7 +89,7 @@ function App() {
   return (
     <div className={styles.app}>
       <div className={styles.nav}>
-        MENU
+        <MenuNavigation />
       </div>
       <div className={styles.body}>
         <NavPanel />

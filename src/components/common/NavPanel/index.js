@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 
-import arrowLeft from '../../assets/icons/arrow_left.svg'
+import arrowLeft from '../../../assets/icons/arrow_left.svg'
 
 import styles from './styles.module.css';
 
