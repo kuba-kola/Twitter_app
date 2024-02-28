@@ -11,8 +11,8 @@
 .nav {
   display: flex;
   justify-content: end;
-  padding: 15px;
-  width: 30%;
+  margin: 15px;
+  max-width: 180px;
 }
 
 .trends {
@@ -21,7 +21,7 @@
 
 .body {
   min-width: 600px;
-  height: 100vh;
+  min-height: 100vh;
   padding: 15px;
   border-left: 1px solid #ede7e3;
   border-right: 1px solid #ede7e3;

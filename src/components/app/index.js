@@ -90,6 +90,7 @@ function App() {
       <div className={styles.nav}>
         <MenuNavigation
           setFilter={setFilter}
+          activeTab={filter}
         />
       </div>
       <div className={styles.body}>
