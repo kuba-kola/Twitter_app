@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Twitter_app/static/css/main.cedb852f.css",
-    "main.js": "/Twitter_app/static/js/main.95e2332f.js",
+    "main.css": "/Twitter_app/static/css/main.0e0a4cd3.css",
+    "main.js": "/Twitter_app/static/js/main.16a2ed6e.js",
     "static/media/123.jpg": "/Twitter_app/static/media/123.944ca0a6908fcbecf93b.jpg",
     "static/media/userpic.jpg": "/Twitter_app/static/media/userpic.2d9a71ada87c2a941f6b.jpg",
     "static/media/4.jpeg": "/Twitter_app/static/media/4.05483f298292b40c5062.jpeg",
@@ -11,11 +11,11 @@
     "static/media/image.svg": "/Twitter_app/static/media/image.76739a420a09b1aae84c80ff339596e2.svg",
     "static/media/arrow_left.svg": "/Twitter_app/static/media/arrow_left.77f11523553efbc3ff46a56bd1d0733e.svg",
     "index.html": "/Twitter_app/index.html",
-    "main.cedb852f.css.map": "/Twitter_app/static/css/main.cedb852f.css.map",
-    "main.95e2332f.js.map": "/Twitter_app/static/js/main.95e2332f.js.map"
+    "main.0e0a4cd3.css.map": "/Twitter_app/static/css/main.0e0a4cd3.css.map",
+    "main.16a2ed6e.js.map": "/Twitter_app/static/js/main.16a2ed6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.cedb852f.css",
-    "static/js/main.95e2332f.js"
+    "static/css/main.0e0a4cd3.css",
+    "static/js/main.16a2ed6e.js"
   ]
 }
