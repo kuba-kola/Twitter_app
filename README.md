@@ -35,6 +35,7 @@ One of the first projects I completed during my studies. You can check it on [gh
 - [react-bootstrap](https://react-bootstrap.netlify.app/)
 - [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
 - [reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
+- [classnames](github.com/JedWatson/classnames)
 
 ## :wrench: Prerequisites and Setup
 
