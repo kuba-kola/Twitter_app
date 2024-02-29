@@ -66,7 +66,7 @@ npm test
 First, run the build:
 
 ```bash
-npm run build
+npm run predeploy
 ```
 
 Then run deployment:
